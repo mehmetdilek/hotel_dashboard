@@ -113,7 +113,7 @@ def update_scatter_plots(selected_hotel, selected_person):
     #     y='price',
     #     color='n_person',
     #     title=f'Prices for {selected_hotel} (Colored by Number of People)',
-    # )
+    # ).update_layout(showlegend=False)
 
     # Scatter plot for check_in vs min price, selected hotel highlighted
     min_price_scatter_fig = px.scatter(
@@ -122,7 +122,7 @@ def update_scatter_plots(selected_hotel, selected_person):
         y='price',
         color = 'hotel_name',
         title=f'Prices for all hotels vs selected hotel',
-    )
+    ).update_layout(showlegend=False)
 
     #Bar plot for check_in vs all stock, colored by room_type
     stock_bar_fig = px.bar(
@@ -131,7 +131,7 @@ def update_scatter_plots(selected_hotel, selected_person):
         y='stock',
         color='hotel_name',
         title=f'Stock for all hotels vs selected hotel',
-    )
+    ).update_layout(showlegend=False)
 
     # Bar plot for check_in vs stock to beat, colored by room_type
     stock_to_beat_bar_fig = px.bar(
@@ -140,7 +140,7 @@ def update_scatter_plots(selected_hotel, selected_person):
         y='stock',
         color='hotel_name',
         title=f'Stock to beat for all hotels vs selected hotel',
-    )
+    ).update_layout(showlegend=False)
 
     # Scatter plot for check_in vs price, colored by room_type
     room_type_scatter_fig = px.scatter(
@@ -149,7 +149,7 @@ def update_scatter_plots(selected_hotel, selected_person):
         y='price',
         color='room_type',
         title=f'Prices for {selected_hotel} (Colored by Room Type)',
-    )
+    ).update_layout(showlegend=False)
 
     # # Scatter plot for check_in vs price, colored by room_type
     # stock_scatter_fig = px.bar(
@@ -168,7 +168,7 @@ def update_scatter_plots(selected_hotel, selected_person):
         y='price',
         color='cancellation',
         title=f'Prices for {selected_hotel} (Colored by Cancellation type)',
-    )
+    ).update_layout(showlegend=False)
     
     return min_price_scatter_fig, stock_bar_fig, stock_to_beat_bar_fig, room_type_scatter_fig, cancellation_scatter_fig
 
